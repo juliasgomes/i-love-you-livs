@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Júlia 💜 Lívia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #0d0d0d;
+            color: #e6ccff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: linear-gradient(to bottom, #1a0033, #0d0d0d);
+        }
+        header {
+            width: 100%;
+            background: #330066;
+            padding: 30px 10px;
+            text-align: center;
+            border-bottom: 2px solid #a64dff;
+            box-shadow: 0 0 20px #8a2be2;
+        }
+        header h1 {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            color: #e6ccff;
+        }
+        section {
+            max-width: 900px;
+            width: 100%;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        h2 {
+            color: #cc99ff;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .gallery img {
+            width: 120px;
+            border-radius: 8px;
+            border: 2px solid #8a2be2;
+            box-shadow: 0 0 10px #8a2be2;
+        }
+        .button-love {
+            background-color: #a64dff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 25px;
+            box-shadow: 0 0 10px #a64dff;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .button-love:hover {
+            background-color: #bf80ff;
+            transform: scale(1.1);
+        }
+        audio {
+            margin-top: 15px;
+        }
+        footer {
+            padding: 20px;
+            font-size: 14px;
+            color: #999;
+        }
+        .bts-tag {
+            font-size: 12px;
+            color: #ffb3ec;
+            margin-top: 5px;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 14px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            .gallery img {
+                width: 90px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Júlia 💜 Lívia</h1>
+    </header>
+
+    <section>
+        <h2>✨ Frases ✨</h2>
+        <p>"Com você, cada segundo vira eternidade."</p>
+        <p>"Seu sorriso é meu lugar favorito no mundo."</p>
+    </section>
+
+    <section>
+        <h2>🎵 Nossa Playlist</h2>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX3PIPIT6lEg5?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </section>
+
+    <section>
+        <h2>💌 Cartinhas Virtuais</h2>
+        <button onclick="alert('Quando sentir saudade, lembre-se: eu te amo mais do que ontem e menos do que amanhã. 💜')">Abra quando sentir saudade</button>
+    </section>
+
+    <section>
+        <h2>🎮 Pixel Art de Nós Duas</h2>
+        <img src="https://via.placeholder.com/150x150.png?text=Pixel+Art" alt="Pixel Art de Júlia e Lívia">
+    </section>
+
+    <section>
+        <h2>🕰️ Contador de Dias</h2>
+        <p id="contador"></p>
+        <script>
+            // Data de início: 29 de abril de 2023 à meia-noite
+            const inicio = new Date("2023-04-29T00:00:00");
+            
+            function atualizarContador() {
+                const agora = new Date();
+                const diffTime = agora - inicio;
+                
+                const segundos = Math.floor(diffTime / 1000);
+                const minutos = Math.floor(segundos / 60);
+                const horas = Math.floor(minutos / 60);
+                const dias = Math.floor(horas / 24);
+                
+                const displayHoras = String(horas % 24).padStart(2, '0');
+                const displayMinutos = String(minutos % 60).padStart(2, '0');
+                const displaySegundos = String(segundos % 60).padStart(2, '0');
+                
+                document.getElementById("contador").textContent = `Estamos juntas há: ${dias} dias, ${displayHoras}:${displayMinutos}:${displaySegundos} horas 💜`;
+            }
+            
+            setInterval(atualizarContador, 1000);
+        </script>
+    </section>
+
+    <section>
+        <h2>🎞️ Nosso Vídeo</h2>
+        <video controls width="80%">
+            <source src="video-nosso.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </section>
+
+    <section>
+        <h2>📸 Nossa Galeria</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/120" alt="Foto 1">
+            <img src="https://via.placeholder.com/120" alt="Foto 2">
+            <img src="https://via.placeholder.com/120" alt="Foto 3">
+            <img src="https://via.placeholder.com/120" alt="Foto 4">
+            <img src="https://via.placeholder.com/120" alt="Foto 5">
+            <img src="https://via.placeholder.com/120" alt="Foto 6">
+        </div>
+        <p>Substitua as imagens acima pelas suas favoritas!</p>
+    </section>
+
+    <section>
+        <button class="button-love" onclick="declareLove()">EU TE AMO</button>
+    </section>
+
+    <footer>
+        <p>Feito por Júlia com muito amor 💜</p>
+    </footer>
+
+    <script>
+        function declareLove() {
+            alert("Lívia, eu te amo infinito! 💖");
+        }
+    </script>
+
+</body>
+</html>
