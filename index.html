@@ -159,7 +159,7 @@ amarrando você em mim?"
                 const displayMinutos = String(minutos % 60).padStart(2, '0');
                 const displaySegundos = String(segundos % 60).padStart(2, '0');
                 
-                document.getElementById("contador").textContent = `Estamos juntas há: ${dias} dias, ${displayHoras}:${displayMinutos}:${displaySegundos} horas 💜`;
+                document.getElementById("contador").textContent = `Estamos juntas há: ${dias} dias, ${displayHoras} horas, ${displayMinutos} minutos e ${displaySegundos} segundos 💜`;
             }
             
             setInterval(atualizarContador, 1000);
